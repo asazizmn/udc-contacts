@@ -1,7 +1,14 @@
-import React from 'react';
+/**
+ * App.js - udc-contacts
+ */
+import React, { Component } from 'react';
 
 
-class Contactlist extends React.Component {
+
+/**
+ * Custom class component that returns a list of names
+ */
+class Contactlist extends Component {
   render() {
 
     // an array of objects
@@ -16,9 +23,8 @@ class Contactlist extends React.Component {
     return (
       <ol>
         {
-          // please note the implicit return from es6 function using `()` parathesis
-          people.map(person =>
-            <li key={person.name}>{person.name}</li>
+          people.map(
+            person => <li key={person.name}>{person.name}</li>
           )
         }
       </ol>
@@ -27,14 +33,17 @@ class Contactlist extends React.Component {
 }
 
 
+
+/**
+ * Default application component
+ */
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hello, World!</h1>
-      </header>
+      <Contactlist />
     </div>
   );
 }
+
 
 export default App;
