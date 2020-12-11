@@ -33,17 +33,31 @@ class Contactlist extends Component {
 }
 
 
+/** 
+ * Main application component
+ * ... please note that `render` is the only compulsory function
+ */ 
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Contactlist />
+      </div>
+    )
+  }
+}
+
 
 /**
  * Default application component
  */
-function App() {
-  return (
-    <div className="App">
-      <Contactlist />
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div className="App">
+//       <Contactlist />
+//     </div>
+//   );
+// }
 
 
 export default App;
