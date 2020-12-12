@@ -12,11 +12,7 @@ class Contactlist extends Component {
   render() {
 
     // an array of objects
-    const people = [
-      { name: 'Tyler' },
-      { name: 'Karen' },
-      { name: 'Richard' }
-    ]
+    const people = this.props.contacts;
 
     // return jsx generated from array of objects above
     // please note that it is considered good practice to wrap multiline jsx within paranthesis
@@ -36,12 +32,21 @@ class Contactlist extends Component {
 /** 
  * Main application component
  * ... please note that `render` is the only compulsory function
- */ 
+ */
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Contactlist />
+        <Contactlist contacts={[
+          { name: 'Tyler' },
+          { name: 'Karen' },
+          { name: 'Richard' }
+        ]} />
+        <Contactlist contacts={[
+          { name: 'Amanda' },
+          { name: 'Mikenzi' },
+          { name: 'Ryan' }
+        ]} />
       </div>
     )
   }
